@@ -1,0 +1,26 @@
+<html>
+<head>
+    <script src="js/angular2-polyfills.js"></script>
+    <script src="js/system.js"></script>
+    <script src="js/typescript.js"></script>
+    <script src="js/Rx.js"></script>
+    <script src="js/angular2.dev.js"></script>
+    <script>
+        System.config({
+            transpiler: 'typescript',
+            typescriptOptions: { emitDecoratorMetadata: true },
+            packages: { 'app': { defaultExtension: 'ts' } },
+            map: {'app':'/app'}
+        });
+        System.import('app/main').then(null, console.error.bind(console));
+
+    </script>
+</head>
+<body>
+       
+    <!--my-app></my-app-->
+    <sample-view></sample-view>
+<hr/>
+<my-second> </my-second>
+</body>
+</html>

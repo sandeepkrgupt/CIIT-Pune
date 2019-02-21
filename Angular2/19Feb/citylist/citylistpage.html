@@ -1,0 +1,14 @@
+<input type="text" [(ngModel)]="cityName" placeholder="city name">
+<input type="text" [(ngModel)]="cityCode" placeholder="city code">
+<input type="text" [(ngModel)]="cityState" placeholder="city state">
+<input type="button" value="Add" (click)="AddcityDetails(cityName,cityCode,cityState)" >
+
+<ul *ngFor= "#c of cities">
+    <li>
+        {{"cityName = " + c.cityName + " cityCode = " + c.cityCode + " cityState = " + c.cityState }}
+    </li>
+    <li>{{c.cityName}}</li>
+    <li>{{c.cityCode}}</li>
+    <li>{{c.cityState}}</li>
+</ul>
+<h2>Welocme to city list</h2>
