@@ -1,0 +1,22 @@
+<html>
+<head>
+    <script src="js/angular2-polyfills.js"></script>
+    <script src="js/system.js"></script>
+    <script src="js/typescript.js"></script>
+    <script src="js/Rx.js"></script>
+    <script src="js/angular2.dev.js"></script>
+    <script>
+        System.config({
+            transpiler: 'typescript',
+            typescriptOptions: { emitDecoratorMetadata: true },
+            packages: { 'StudentRecordUsingClass': { defaultExtension: 'ts' } },
+            map: {'StudentRecordUsingClass':'/StudentRecordUsingClass'}
+        });
+        System.import('StudentRecordUsingClass/main').then(null, console.error.bind(console));
+
+    </script>
+</head>
+<body>
+    <std-comp></std-comp>
+</body>
+</html>
