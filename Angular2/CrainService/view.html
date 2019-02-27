@@ -1,0 +1,52 @@
+<table>
+    <tr>
+        <td>
+            <label>Start Time</label>
+            <input type="time" [(ngModel)]="startTime" placeholder="start time" alt="start time" (change)="caltime(startTime,endTime,rest,rate)" >
+        </td>
+        <td>
+            <label>End Time</label>
+            <input type="time" [(ngModel)]="endTime" placeholder="end time" (change)="caltime(startTime,endTime,rest,rate)">
+        </td>
+        <td>
+            <label>Rest</label>
+            <input type="text" [(ngModel)]="rest" placeholder="rest time(in minute)" (change)="caltime(startTime,endTime,rest,rate)">
+        </td>
+        <td>
+            <label>Total Dur</label>
+            <input type="text" [(ngModel)]="totalDur" placeholder="hour : minute">
+        </td>
+        <td>
+            <label>Rate</label>
+            <input type="text" [(ngModel)]="rate" placeholder="rate" (change)="caltime(startTime,endTime,rest,rate)" required="enert">
+        </td>
+        <td>
+            <label>Total Amt</label>
+            <input type="text" [(ngModel)]="totalAmt" placeholder="total amount">
+        </td>
+        <td>
+            <input type="button" (click)="add(startTime,endTime,rest,totalDur,rate,totalAmt)" value="add">
+
+        </td>
+    </tr>
+</table>
+<table border="1">
+    <thead>
+        <th>Start Time</th>
+        <th>End Time</th>
+        <th>Rest(In Minute)</th>
+        <th>total Dur(HH:MM)</th>
+        <th>rate</th>
+        <th>total amount</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="#list of arr">
+            <td>{{list.startTime}}</td>
+            <td>{{list.endTime}}</td>
+            <td>{{list.rest}}</td>
+            <td>{{list.totalDur}}</td>
+            <td>{{list.rate}}</td>
+            <td>{{list.totalAmt}}</td>
+        </tr>
+    </tbody>
+</table>

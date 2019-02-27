@@ -1,0 +1,83 @@
+<div>
+    <table border="1">
+        <tr>
+            <td>Roll</td>
+            <td>
+                <input type="text" [(ngModel)]="sRoll" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>Name</td>
+            <td>
+                <input type="text" [(ngModel)]="sName" />
+            </td>
+        </tr>
+        <tr>
+            <td>Eng</td>
+            <td>
+                <input type="text" [(ngModel)]="sEng" (change) = "calSubject(sEng,sMath,sSci)"/>
+            </td>
+        </tr>
+        <tr>
+            <td>Math</td>
+            <td>
+                <input type="text" [(ngModel)]="sMath"  (change) = "calSubject(sEng,sMath,sSci)"/>
+            </td>
+        </tr>
+        <tr>
+            <td>Sci</td>
+            <td>
+                <input type="text" [(ngModel)]="sSci"  (change) = "calSubject(sEng,sMath,sSci)"/>
+            </td>
+        </tr>
+        <tr>
+            <td>Total</td>
+            <td>
+                <input type="text" [(ngModel)]="sTotal" disabled ="true"/>
+            </td>
+        </tr>
+        <tr>
+            <td>Percent</td>
+            <td>
+                <input type="text" [(ngModel)]="sPercent" disabled ="true"/>
+            </td>
+        </tr>
+        <tr>
+            <td>Grade</td>
+            <td>
+                <input type="text" [(ngModel)]="sGrade" disabled ="true"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" (click) ="calResult(sRoll,sName,sEng,sMath,sSci,sTotal,sPercent,sGrade)"  value="Add"/>
+            </td>
+        </tr>
+
+    </table>
+
+    <table border="1">
+        <tr>
+            <td>Roll</td>
+            <td>Name</td>
+            <td>Eng</td>
+            <td>Math</td>
+            <td>Sci</td>
+            <td>Total</td>
+            <td>Percent</td>
+            <td>Grade</td>
+            <td>Action</td>
+        </tr>
+        <tr *ngFor="#record of studentArray" style="color:{{record.color}}">
+            <td>{{record.roll}}</td>
+            <td>{{record.name}}</td>
+            <td>{{record.Eng}}</td>
+            <td>{{record.Math}}</td>
+            <td>{{record.Sci}}</td>
+            <td>{{record.Total}}</td>
+            <td>{{record.Percent}}</td>
+            <td>{{record.Grade}}</td>
+        </tr>
+    </table>
+</div>
