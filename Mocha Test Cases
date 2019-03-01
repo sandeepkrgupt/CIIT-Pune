@@ -1,1 +1,4 @@
 Creating Mocha test Cases for Your App
+
+import {expect} from 'chai';
+import {shallow} from 'enzyme';
