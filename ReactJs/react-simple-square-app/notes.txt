@@ -1,0 +1,26 @@
+npm init -y
+
+npm install react --save
+
+npm install react-dom
+
+npm install webpack --save
+
+npm install webpack-dev-server
+
+npm install webpack-cli // webpack command line 
+
+npm install babel-core --save-dev // transpiler,Webpack is a bundler whereas Gulp/Babel is a task runner,
+
+npm install babel-loader // 
+
+npm install babel-preset//
+
+npm install babel-env
+
+npm install html-webpack-plugin --save-dev
+
+constructor - to initialize class members,variables etc.
+
+super - calling base class component.e.g - 
+class abc extends React.Component {} to call Component class we use super keyword.
