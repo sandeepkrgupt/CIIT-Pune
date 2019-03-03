@@ -1,0 +1,25 @@
+<html>
+        <head>
+            <script src="js/angular2-polyfills.js"></script>
+            <script src="js/system.js"></script>
+            <script src="js/typescript.js"></script>
+            <script src="js/Rx.js"></script>
+            <script src="js/angular2.dev.js"></script>
+            <script>
+                System.config({
+                    transpiler: 'typescript',
+                    typescriptOptions: { emitDecoratorMetadata: true },
+                    packages: { 'nestedComponent': { defaultExtension: 'ts' } },
+                    map: {'nestedComponent':'/nestedComponent'}
+                });
+                System.import('nestedComponent/main').then(null, console.error.bind(console));
+        
+            </script>
+        </head>
+        <body>
+               
+            <parent-app></parent-app>
+        <hr/>
+        <my-second> </my-second>
+        </body>
+        </html>
