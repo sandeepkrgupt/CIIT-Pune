@@ -1,0 +1,24 @@
+<html>
+        <head>
+            <script src="js/angular2-polyfills.js"></script>
+            <script src="js/system.js"></script>
+            <script src="js/typescript.js"></script>
+            <script src="js/Rx.js"></script>
+            <script src="js/angular2.dev.js"></script>
+            <script>
+                System.config({
+                    transpiler: 'typescript',
+                    typescriptOptions: { emitDecoratorMetadata: true },
+                    packages: { 'CrainService': { defaultExtension: 'ts' } },
+                    map: {'CrainService':'/CrainService'}
+                });
+                System.import('CrainService/main').then(null, console.error.bind(console));
+        
+            </script>
+        </head>
+        <body>
+            <crain-app></crain-app>
+        <hr/>
+        <my-second> </my-second>
+        </body>
+        </html>

@@ -1,0 +1,22 @@
+<html>
+<head>
+    <script src="js/angular2-polyfills.js"></script>
+    <script src="js/system.js"></script>
+    <script src="js/typescript.js"></script>
+    <script src="js/Rx.js"></script>
+    <script src="js/angular2.dev.js"></script>
+    <script>
+        System.config({
+            transpiler: 'typescript',
+            typescriptOptions: { emitDecoratorMetadata: true },
+            packages: { 'productEntry': { defaultExtension: 'ts' } },
+            map: {'productEntry':'/productEntry'}
+        });
+        System.import('productEntry/main').then(null, console.error.bind(console));
+
+    </script>
+</head>
+<body>
+    <my-app></my-app>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+        <head>
+            <script src="js/angular2-polyfills.js"></script>
+            <script src="js/system.js"></script>
+            <script src="js/typescript.js"></script>
+            <script src="js/Rx.js"></script>
+            <script src="js/angular2.dev.js"></script>
+            <script>
+                System.config({
+                    transpiler: 'typescript',
+                    typescriptOptions: { emitDecoratorMetadata: true },
+                    packages: { 'StudentResult': { defaultExtension: 'ts' } },
+                    map: {'StudentResult':'/StudentResult'}
+                });
+                System.import('StudentResult/main').then(null, console.error.bind(console));
+        
+            </script>
+        </head>
+        <body>
+                <studentResult-app></studentResult-app>
+        </body>
+        </html>
