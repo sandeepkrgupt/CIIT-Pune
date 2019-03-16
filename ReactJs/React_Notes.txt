@@ -1,0 +1,107 @@
+npm init -y
+
+npm install react --save
+
+npm install react-dom
+
+npm install webpack --save
+
+npm install webpack-dev-server
+
+npm install webpack-cli // webpack command line 
+
+npm install babel-core --save-dev // transpiler,Webpack is a bundler whereas Gulp/Babel is a task runner,
+
+npm install babel-loader // 
+
+npm install babel-preset//
+
+npm install babel-env
+
+npm install html-webpack-plugin --save-dev
+
+constructor - to initialize class members,variables etc.
+
+super - calling base class component.e.g - 
+class abc extends React.Component {} to call Component class we use super keyword.
+encapsulation example - creating multiple classes and put in one class file is example of encapsulation and then export that one class only.
+
+key - it is for unique index for table , so cannot access outside.
+
+
+--------------------------------------------
+
+react js -
+it is front end js library developed by fb. it follows component based approach which helps in developing reusable ui comp.
+it is used to develop complex and interactive based mobile ui.
+
+features -
+1. it uses virtual dom instead of real dom, it uses server side rendering. it uses uni directional data flow/binding.
+diff b/w real and virtual dom-
+it update slowly, can directly update html. too much memory wastage. crate new dom if element updates.dom manupulation is very expensive.
+vertual dom - 
+it updates faster. cann't directly update html. no memory wastage. dom manupulation is very easy.
+
+advantages-
+it increases performance of App. It can be coniviently used on client and server side, because jsx code readability increases.
+easy to intigrate other frame work such as angular.
+
+diff b/w angular and react -
+react-
+it's architecture is only view of Mvc , IT RENDER On server side.
+uses vertual dom
+it has compile time debugging 
+
+angular-
+it's arch. is complete MVC.
+it render on client side
+uses real dom
+it has two way data binding
+it has run time debugging
+
+---------------------------
+jsx -
+it stands for java script xml.this file is used by react which utilises the expresiveness of js along with html like template syntax.
+this file makes app robust and boost it's performance.browser cannot understand jsx because it can only read js objects. jsx is not regular js object.
+so to enable browser to read jsx, first we need to trasform jsx file into js object using jsx trasformer like babel and then pass it to browser.
+
+--------------------------
+Babel - babel loader is used to traslate jsx syntax into javascript. babel is highly configurable compiler which compile jsx file into js version.
+-------------------------
+render function -
+
+each react comp. must have render mandatoryliy.
+it always return single react element which is representtion of native dom comp.
+if more than one html element needs to be rendered then they must be grouped together inside one enclosing tag.
+----------------------
+props-
+it is nothing but properties in react. they are read only comp. 
+they are always passed out from parent to child comp throughout app.
+child comp can never send props back to the comp. 
+this helps in maintaining uni directional data flow and are generally used to render
+dynamically generated data.
+-----------------
+state -
+state is main part of react comp. state are source of data and must be kept as simple as possible.
+state are the objects which determinds comp rendering and behavior.
+states are mutable where as props are immutable
+we can chage inside the component.
+------------------
+note-
+react component lifecycle-
+1.initial rendering phase (init)- this is phase when comp is about to start. its life journey and makes it way to the dom.
+2.updating phase - once the comp added to the dom, it is potentially update and rerender only when prop or state change occurs.
+3.unmounting phase - this is final phase.in which componet is destroyed and removed from the dom.(release the momery)
+----------------------
+ref-
+references in react.it is attribute which helps to store reference to the perticular react element or comp.
+it is used to return references to perticular element or comp. we use ref in following scenarios
+1. when we need to manage focus,select text etc.
+2.to integrate with third party libraries.
+----------------------
+events in react-
+in raect events are triggerd reaction to specific action like mouse hover, click etc.
+---------------------
+
+
+
